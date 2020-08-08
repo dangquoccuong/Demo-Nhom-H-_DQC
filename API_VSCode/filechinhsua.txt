@@ -1,0 +1,2 @@
+trả về message khi insert
+trả thêm 1 data khi delete

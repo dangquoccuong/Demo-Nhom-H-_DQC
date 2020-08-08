@@ -1,0 +1,62 @@
+$font-w:100;
+$color-icon: #878787;
+
+@mixin re-content($number) {
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+.card-product{
+    .img-student{
+        transition: all 0.5s ease;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 99;
+        .icon-updatestudent{
+            border-radius: 50%;
+            cursor: pointer;
+            color: black;
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .scale-img{
+        transition: all 0.5s ease;
+    }
+
+    &:hover{
+        .scale-img{
+            transform: scale(1.1);
+        }
+        .img-student{
+            transition: all 0.5s ease;
+            opacity: 1 !important;
+        }
+        
+    }
+    
+    
+    
+    .text-card{
+        font-weight: $font-w;
+        @include re-content(3);
+        // &::before{
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-image: linear-gradient(to bottom,rgba(255,255,255,0) 0%,#fff 100%);
+        // }
+    }
+    .icon-unlock{
+        background-color: whitesmoke;
+        color:$color-icon ;
+    }
+}
